@@ -1,7 +1,7 @@
 package Task3;
 
-public class Hero {
-    public String name;
+public abstract class Hero {
+    private String name;
 
     public Hero(String name) {
         this.name = name;
@@ -10,7 +10,7 @@ public class Hero {
     public String getName() {
         return name;
     }
-    public void attackEnemy(){
-        System.out.println("The hero attacks the enemy");
-    }
+
+    public abstract void attackEnemy(Enemy enemy);
 }
+

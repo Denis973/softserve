@@ -1,7 +1,14 @@
 package Task3;
 
-public class Enemy {
-    public int health;
+public class Enemy implements Mortal {
+    private int health;
+
+    public boolean isAlive() {
+        if (this.health <= 0) {
+            return false;
+        }
+        return true;
+    }
 
     public Enemy(int health) {
         this.health = health;
@@ -19,12 +26,11 @@ public class Enemy {
 
     public void takeDamage(int damage) {
         health -= damage;
-        System.out.println("Health enemy: " + health);
-        if (health < 0) {
+        if (!isAlive()) {
             health = 0;
             System.out.println("The enemy is destroyed!, Health equals: " + health);
+        } else {
+            System.out.println("Health enemy: " + health);
         }
     }
-
-
 }

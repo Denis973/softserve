@@ -3,6 +3,7 @@ package Task3;
 public class Enemy implements Mortal {
     private int health;
 
+
     public boolean isAlive() {
         if (this.health <= 0) {
             return false;
@@ -32,5 +33,10 @@ public class Enemy implements Mortal {
         } else {
             System.out.println("Health enemy: " + health);
         }
+    }
+
+    public void attackHero(Hero hero) {
+        System.out.println("The enemy is attacking" + "Attack Power: 30");
+        hero.takeDamage(30);
     }
 }

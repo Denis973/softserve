@@ -2,8 +2,10 @@ package Task3;
 
 public class Mage extends Hero {
 
+    int health = 80;
+
     public Mage(String name) {
-        super(name);
+        super(name, 80);
     }
 
     @Override

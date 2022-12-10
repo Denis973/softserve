@@ -5,6 +5,7 @@ public class BattleGround {
         Enemy enemy = new Enemy(20);
         Warrior warrior = new Warrior("Max");
         warrior.attackEnemy(enemy);
+        enemy.attackHero(warrior);
 
     }
 }
